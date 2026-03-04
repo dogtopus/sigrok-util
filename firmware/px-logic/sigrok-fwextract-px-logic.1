@@ -1,18 +1,24 @@
-.TH SIGROK\-FWEXTRACT\-LECROY\-LOGICSTUDIO 1 "Oct 25, 2015"
+.TH SIGROK\-FWEXTRACT\-PX\-LOGIC 1 "Feb 25 2026"
 .SH "NAME"
-sigrok\-fwextract\-lecroy\-logicstudio \- Extract LeCroy LogicStudio firmware
+sigrok\-fwextract\-px\-logic \- Extract PX Logic firmware
 .SH "SYNOPSIS"
-.B sigrok\-fwextract\-lecroy\-logicstudio [FILE]
+.B sigrok\-fwextract\-px\-logic
 .SH "DESCRIPTION"
-This tool extracts firmware from the Windows software that ships with the LeCroy LogicStudio logic analyzer. It is called with the path to
-.B LS16Lib.dll
-as its only argument, e.g.:
+This tool downloads firmware and FPGA bitstreams from the vendor
+software GitHub repository for the PX Logic USB logic analyzer.
 .PP
-.B "  $ sigrok-fwextract-lecroy-logicstudio /path/to/LogicStudio/LS16Lib.dll"
+In order to extract the firmware/bitstreams, run the following command:
 .PP
-The program will then write two FPGA bitstream files to the current directory.
-Copy these over to the location where libsigrok expects to find its firmware
-files. By default this is
+.B "  $ sigrok-fwextract-px-logic"
+.br
+.RB "  Downloading px-logic-mcu.fw..."
+.br
+.RB "  Downloading px-logic-fpga-stage1.fw..."
+.br
+.RB "  Downloading px-logic-fpga-stage2.fw..."
+.PP
+Copy the resulting files over to the location where libsigrok expects
+to find its firmware files. By default this is
 .BR /usr/local/share/sigrok-firmware .
 .SH OPTIONS
 None.
@@ -25,7 +31,7 @@ Exits with 0 on success, 1 on most failures.
 .br
 \fBsigrok\-fwextract\-kingst\-la2016\fP(1)
 .br
-\fBsigrok\-fwextract\-px\-logic\fP(1)
+\fBsigrok\-fwextract\-lecroy\-logicstudio\fP(1)
 .br
 \fBsigrok\-fwextract\-saleae\-logic16\fP(1)
 .br
