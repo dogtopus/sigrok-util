@@ -26,12 +26,12 @@ import urllib.parse
 import urllib.request
 
 
-COMMIT = '0ac8c55bc86cf90f41496dcb422caa518ac4d4b0'
+COMMIT = '8be58dea74acc300b772915b3adc368691db3075'
 FILES = [
     {
         'name': 'px-logic-mcu.fw',
         'original_name': 'SCI_LOGIC.bin',
-        'sha256': '75d1d38a9ea4bddef6bd41637939ee27028b75c86bbf504350fddad1129aa5ae',
+        'sha256': 'da9b1e4912d3bc3757aa1d1ef71c4a19971bdc7ab66a6d31a9754fa82769ceaa',
     }, {
         'name': 'px-logic-fpga-stage1.fw',
         'original_name': 'hspi_ddr_RST.bin',
